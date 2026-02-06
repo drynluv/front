@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test17_2.html</title>
+  <style>
+    body, ul, li {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+    }
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    nav.menu {
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    nav.menu ul {
+      background-color: #ddd;
+      display: inline-block;
+    }
+    nav.menu ul li {
+      /* background-color: #ddd; */
+      display: inline-block;
+      padding: 10px;
+      position: relative;
+    }
+
+    nav.menu ul li:hover {
+      /* background-color: #ddd; */
+      /* display: inline-block;
+      padding: 10px; */
+      background-color: #000;
+      color: #fff;
+    }
+
+    .menu ul ul {
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      display: none;
+    }
+
+    .menu ul li {
+      /* display: inline-block; */
+    }
+
+    .menu ul li:hover > a {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .menu ul li:hover > ul {
+      display: block;
+    }
+
+    .menu ul li > a {
+      /* padding: 10px; */
+      background-color: #ddd;
+      display: block;
+    }
+
+    nav.menu ul li li{
+      width: 100%;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <ul>
+      <li><a href="#">주메뉴연습1</a>
+        <ul>
+          <li><a href="#">서브메뉴1</a></li>
+          <li><a href="#">서브메뉴2</a></li>
+          <li><a href="#">서브메뉴3</a></li>
+          <li><a href="#">서브메뉴4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">주메뉴연습2</a>
+        <ul>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+          </ul>
+      </li>
+      <li><a href="#">주메뉴연습3</a>
+        <ul>
+          <li><a href="#">서브메뉴1</a></li>
+          <li><a href="#">서브메뉴2</a></li>
+          <li><a href="#">서브메뉴3</a></li>
+          <li><a href="#">서브메뉴4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">주메뉴연습4</a>
+        <ul>
+          <li><a href="#">서브메뉴1</a></li>
+          <li><a href="#">서브메뉴2</a></li>
+          <li><a href="#">서브메뉴3</a></li>
+          <li><a href="#">서브메뉴4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">주메뉴연습5</a>
+        <ul>
+          <li><a href="#">서브메뉴1</a></li>
+          <li><a href="#">서브메뉴2</a></li>
+          <li><a href="#">서브메뉴3</a></li>
+          <li><a href="#">서브메뉴4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>

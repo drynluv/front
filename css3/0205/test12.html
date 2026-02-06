@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: orange;
+    }
+
+    a:active {
+      /* text-decoration: overline; */
+      text-decoration: line-through;
+      color: green;
+    }
+
+    p.atom {
+      font-size: 1.5em;
+      line-height: 2em;
+      text-indent: 50px;
+      text-shadow: 3px 2px 1px gray;
+    }
+
+    span.ap {
+      background-color: pink;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      border: 1px solid gray;
+      margin: 10px;
+      float: left;
+    }
+
+    #item1 { background-color: aqua; }
+    #item2 { background-color: rgb(38, 0, 255); }
+    #item3 { background-color: antiquewhite; }
+    #item4 { background-color: blueviolet; }
+    #item5 { background-color: brown; }
+    #item6 { background-color: chartreuse; }
+    #item7 { background-color: chocolate; }
+    #item8 { background-color: darkcyan; }
+    #item9 { background-color: darkorange; }
+    #item10 { background-color: beige; }
+
+    .boxBottom {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h2>문서장식</h2>
+  <p><a href="#">연결1</a></p>
+  <p><a href="#">연결2</a></p>
+  <p><a href="#">연결3</a></p>
+  <p><a href="#">연결4</a></p>
+  <p class="atom">
+    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 <span class="ap">백두산</span>이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 <span class="ap">백두산</span>이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 <span class="ap">백두산</span>이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+  </p>
+  <div id="item1" class="item"></div>
+  <div id="item2" class="item"></div>
+  <div id="item3" class="item"></div>
+  <div id="item4" class="item"></div>
+  <div id="item5" class="item"></div>
+  <div id="item6" class="item"></div>
+  <div id="item7" class="item"></div>
+  <div id="item8" class="item"></div>
+  <div id="item9" class="item"></div>
+  <div id="item10" class="item"></div>
+  <div class="boxBottom">
+    이곳은 그림 아래 영역입니다. 이곳은 그림 아래 영역입니다.
+  </div>
+</body>
+</html>

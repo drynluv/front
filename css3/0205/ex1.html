@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex1.html</title>
+  <script src="https://kit.fontawesome.com/df66332deb.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      width: 1000px;
+      margin: 0px auto;
+      padding: 0px;
+    }
+
+    a { text-decoration: none; color: blue }
+    a:hover { text-decoration: underline; }
+
+    #item1 { 
+      background-color: chocolate;
+      width: 1000px;
+      height: 150px;
+    }
+
+    #item2 { 
+      /* background-color: blueviolet; */
+      width: 780px;
+      /* height: 700px; */
+      float: left;
+    }
+
+    #item3 { 
+      /* background-color: darkkhaki; */
+      width: 200px;
+      /* height: 700px; */
+      float: left;
+      margin: 10px 5px 8px 15px;
+    }
+
+    #item4 { 
+      background-color: darkslategray;
+      width: 1000px;
+      height: 100px;
+      clear: both;
+    }
+
+    #title {
+      margin: 10px 0px;
+    }
+    
+    #product {
+      width: 780px;
+      height: 700px;
+      /* background-color: darkgrey; */
+    }
+    
+    .productRow {
+      float: left;
+    }
+    
+    .productBox {
+      margin: 10px 10px 30px;
+      text-align: center;
+      line-height: 25px;
+    }
+
+    div#item1-logo {
+      padding: 50px;
+      font-size: 2em;
+      text-shadow: 3px 2px 2px white;
+      float: left;
+    }
+
+    div#item1-menu {
+      text-align: right;
+      font-size: 1em;
+      padding-top: 5px;
+      padding-right: 10px;
+    }
+    
+    .btnLogin {
+      height: 100px;
+      padding: 20px 10px;
+    }
+
+    table {
+      background-color: darkkhaki;
+      width: 100%;
+    }
+
+    th, td {
+      font-size: 1em;
+      padding: 6px 1px;
+      text-align: center;
+    }
+    input {
+      width: 90px;
+    }
+
+    .banner {
+      margin-bottom: 10px;
+    }
+
+    .sns {
+      padding-top: 35px;
+      text-align: center;
+      font-size: 20px;
+      color: bisque;
+    }
+    .sns-color, copyright { color: bisque; }
+    .copyright { line-height: 40px; }
+  </style>
+</head>
+<body>
+  <div id="item1">
+    <div id="item1-logo">Green 주식회사</div>
+    <div id="item1-menu">
+      <a href="#" class="sns-color">공지사항</a> <span class="sns-color">|</span>
+      <a href="#" class="sns-color">자유게시판</a> <span class="sns-color">|</span>
+      <a href="#" class="sns-color">고객센터</a>
+    </div>
+  </div>
+  <div id="item2">
+    <div id="title">
+      <img src="../../images/12.jpg" width="780" height="150px" alt="신상품 소개">
+    </div>
+    <div id="product">
+      <div class="productRow">
+        <div class="productBox">
+          <img src="../../images/20.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품1</b>
+        </div>
+        <div class="productBox">
+          <img src="../../images/11.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품2</b>
+        </div>
+        <div class="productBox">
+          <img src="../../images/12.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품3</b>
+        </div>
+      </div>
+      <div class="productRow">
+        <div class="productBox">
+          <img src="../../images/13.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품4</b>
+        </div>
+        <div class="productBox">
+          <img src="../../images/14.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품5</b>
+        </div>
+        <div class="productBox">
+          <img src="../../images/15.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품6</b>
+        </div>
+      </div>
+      <div class="productRow">
+        <div class="productBox">
+          <img src="../../images/16.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품7</b>
+        </div>
+        <div class="productBox">
+          <img src="../../images/17.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품8</b>
+        </div>
+        <div class="productBox">
+          <img src="../../images/18.jpg" width="240px" height="220px" alt="10.jpg"><br/>
+          <b>상품9</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="item3">
+    <table>
+      <tr>
+        <th>아이디</th>
+        <td><input type="text" name="mid" autofocus/></td>
+        <!-- <td rowspan="2">
+          <button type="button" class="btnLogin">로그인</button>
+        </td> -->
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pwd"/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit">로그인</button>
+          <button type="button">회원가입</button>
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <div>
+      <div class="banner"><img src="../../images/11.jpg" width="100%"/></div>
+      <div class="banner"><img src="../../images/12.jpg" width="100%"/></div>
+      <div class="banner"><img src="../../images/13.jpg" width="100%"/></div>
+      <div class="banner"><img src="../../images/14.jpg" width="100%"/></div>
+      <div class="banner"><img src="../../images/15.jpg" width="100%"/></div>
+      <div class="banner"><img src="../../images/16.jpg" width="100%"/></div>
+    </div>
+  </div>
+  <div id="item4" class="sns">
+    <a href="#" title="email"><i class="fa-solid fa-envelope sns-color"></i></a>
+    <a href="#" title="youtube"><i class="fa-brands fa-youtube sns-color"></i></a>
+    <a href="#" title="instagram"><i class="fa-brands fa-instagram sns-color"></i></a>
+    <a href="#" title="discord"><i class="fa-brands fa-discord sns-color"></i></a>
+    <a href="#" title="facebook"><i class="fa-brands fa-facebook sns-color"></i></a>
+    <a href="#" title="kakao-talk"><i class="fa-brands fa-kakao-talk sns-color"></i></a>
+    <a href="#" title="line"><i class="fa-brands fa-line sns-color"></i></a>
+    <a href="#" title="tiktok"><i class="fa-brands fa-tiktok sns-color"></i></a>
+    <a href="#" title="whatsapp"><i class="fa-brands fa-whatsapp sns-color"></i></a>
+    <div class="copyright">2025. 2. 4 &copy; Design By Kil Dong Hong - Green Corporation</div>
+  </div>
+</body>
+</html>
