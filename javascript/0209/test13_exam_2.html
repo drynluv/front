@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test13_exam.html</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      let gender = myform.gender.value;
+      let mid = document.getElementById("mid").value.trim();
+      let pwd = document.getElementById("pwd").value.trim();
+      let name = document.getElementById("name").value.trim();
+      let address = document.getElementById("address").value.trim();
+      let content = document.getElementById("content").value.trim();
+      let age = myform.age.value;
+      
+      if (mid.trim() == "") {
+        alert("아이디를 입력하세요");
+        myform.mid.focus();
+      }
+      else if (pwd.trim() == "") {
+        alert("비밀번호를 입력하세요");
+        document.getElementById("pwd").focus();
+      }
+      else if (name.trim() == "") {
+        alert("성함을 입력하세요");
+        document.getElementById("name").focus();
+      }
+      else if (age.trim() == "") {
+        alert("나이를 입력하세요");
+        document.getElementById("age").focus();
+      }
+      else if (address.trim() == "") {
+        alert("주소를 입력하세요");
+        document.getElementById("address").focus();
+      }
+      else if (content.trim() == "") {
+        alert("자기소개를 입력하세요");
+        myform.content.focus();
+      }
+      else {
+        let hobby = '';
+        if (document.getElementById("hobby1").checked) hobby += document.getElementById("hobby1").value + "/";
+        if (document.getElementById("hobby2").checked) hobby += document.getElementById("hobby2").value + "/";
+        if (document.getElementById("hobby3").checked) hobby += document.getElementById("hobby3").value + "/";
+        if (document.getElementById("hobby4").checked) hobby += document.getElementById("hobby4").value + "/";
+        if (document.getElementById("hobby5").checked) hobby += document.getElementById("hobby5").value + "/";
+        hobby = hobby.substring(0, hobby.length - 1);
+        
+        if (hobby=="") {
+          alert("취미를 1개 이상 선택하세요");
+          return false;
+        }
+        alert("서버로 값을 전송합니다.");
+        myform.submit();
+        // demo.innerHTML = "성별 : " + gender + ", 취미 : " + hobby;
+        document.getElementById("demo").innerHTML = "성별 : <font color='red'>" + gender + "</font>, 취미 : " + hobby;
+      }
+    }
+  </script>
+  <style>
+    .titleWidth {
+      width: 100px;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <br />
+  <div class="container">
+    <h2 class="mb-4 text-center">회 원 가 입</h2>
+    <div name="myform" method="post" action="test13Ok.html" class="border p-3">
+      <form class="myform" name="myform">
+        <div class="input-group mb-2">
+          <div class="input-group-text bg-secondary-subtle titleWidth">아 이 디</div>
+          <input type="text" name="mid" id="mid" class="form-control" placeholder="  아이디를 입력하세요." />
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-text bg-secondary-subtle titleWidth">비 밀 번 호</div>
+          <input type="password" name="pwd" id="pwd" class="form-control" placeholder="  비밀번호를 입력하세요." />
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-text bg-secondary-subtle titleWidth">성 함</div>
+          <input type="text" name="name" id="name" class="form-control" placeholder="  성함을 입력하세요." />
+        </div>
+        <div class="input-group mb-2 border rounded">
+          <div class="input-group-text bg-secondary-subtle titleWidth">성 별</div>
+          <div class="form-check mt-2">
+            <input type="radio" name="gender" id="gender1" value="남자" />남자 &nbsp;
+            <input type="radio" name="gender" id="gender2" value="여자" checked />여자
+          </div>
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-text bg-secondary-subtle titleWidth">나 이</div>
+          <input type="number" name="age" id="age" class="form-control">
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-text bg-secondary-subtle titleWidth">주 소</div>
+          <input type="text" name="address" id="address" class="form-control">
+        </div>
+        <div class="input-group mb-2 border rounded"> <!-- border rounded 성별, 취미 테두리 라우디스 적용-->
+          <div class="input-group-text bg-secondary-subtle me-2 titleWidth">취 미</div>
+          <div class="mt-2"><input type="checkbox" name="hobby" id="hobby1" class="form-check-input ms-3 me-2"
+              value="등산" />등산</div> &nbsp;&nbsp;
+          <div class="mt-2"><input type="checkbox" name="hobby" id="hobby2" class="form-check-input me-2"
+              value="낚시" />낚시</div> &nbsp;&nbsp;
+          <div class="mt-2"><input type="checkbox" name="hobby" id="hobby3" class="form-check-input me-2"
+              value="바이크" />바이크</div> &nbsp;&nbsp;
+          <div class="mt-2"><input type="checkbox" name="hobby" id="hobby4" class="form-check-input me-2"
+              value="복싱" />복싱</div> &nbsp;&nbsp;
+          <div class="mt-2"><input type="checkbox" name="hobby" id="hobby5" class="form-check-input me-2"
+              value="수영" />수영</div>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-text bg-secondary-subtle titleWidth">자 기 소 개</div>
+          <textarea rows="5" name="content" id="content" placeholder="자기소개를 입력하세요." class="form-control"></textarea>
+        </div>
+        <div class="d-flex justify-content-end gap-2 "> <!-- 부트스트랩 오른쪽 정렬 -->
+          <input type="button" value="회원가입" onclick="fCheck()" class="btn btn-sm btn-success">
+          <input type="reset" value="입력취소" class="btn btn-sm btn-warning">
+        </div>
+      </form>
+      </div>
+    <div class="mt-3" id="demo"></div>
+  </div>
+</body>
+
+</html>

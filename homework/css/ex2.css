@@ -1,0 +1,254 @@
+/* PC화면을 기준(최소 1024px) */
+/* 공통사항 */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "맑은 고딕", "굴림", "돋움", "궁서";
+  font-size: 1em;
+  background: linear-gradient(to bottom, skyblue, white 50%) ;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* PC 모드 설정 */
+.container {
+  width: 960px;
+  margin: 0px auto; /* 가운데정렬 */
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+#mainHeader {
+  height: 280px;
+  margin: 0px;
+  background-image: url("images/12.jpg");
+}
+
+#mainHeader h1 {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+
+.header1 a {
+  color: yellow;
+  font-size: 2em;
+  text-shadow: 1px 2px 1px black;
+}
+
+#mainNav {
+  background-color: #060;
+  width: 960px;
+  height: 60px;
+}
+
+#mainNav ul {
+  text-align: center;
+  margin: 0px;
+}
+
+#mainNav ul li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  font-size: 1.0em;
+  padding: 20px 0px 0px 90px;
+  font-weight: bolder;
+}
+
+#mainNav a {
+  color: white;
+}
+
+#mainNav a:hover {
+  color: blue;
+}
+
+section#content {
+  float: left;
+  width: 720px;
+  background-color: white;
+  padding-left: 10px;
+}
+
+.notice {
+  line-height: 25px;
+}
+
+#footer {
+  clear: both;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0px 25px;
+}
+
+#sidebar {
+  width: 200px;
+  float: right;
+  padding: 20px 10px;
+  line-height: 45px;
+}
+
+#sidebar img:hover {
+  border: 1px solid black;
+  opacity: 0.8;
+}
+
+article {
+  margin-top: 25px;
+}
+
+#infor ul.notice li {
+  list-style: circle;
+}
+
+/* 태블릿(600px ~ 1023) */
+@media screen and (min-width:600px) and (max-width:1023px) {
+  /* @media screen and (max-width:1023px) { */
+  .container {
+    width: 580px;
+  }
+
+  #mainHeader {
+    height: 170px;
+    background-image: url("images/11.jpg");
+  }
+
+  #mainHeader h1 {
+    margin-top: 20px;
+  }
+
+  .header1 a {
+    font-size: 1.5em;
+  }
+
+  #mainNav {
+    width: 580px;
+  }
+
+  /* #mainNav ul {
+    text-align: center;
+    margin: 0px;
+  } */
+
+  #mainNav ul li {
+    width: 90px;
+    font-size: 0.9em;
+    padding: 20px 0px 0px 30px;
+    font-weight: bold;
+  }
+
+  section#content {
+    width: 550px;
+    padding-left: 10px;
+  }
+
+  .notice {
+    line-height: 25px;
+  }
+
+  #footer {
+    font-size: 0.8em;
+    width: 550px;
+  }
+
+  #sidebar {
+    width: 550px;
+    float: right;
+    padding: 0px 10px;
+  }
+
+  #sidebar img {
+    width: 32%;
+  }
+
+  #sidebar img:hover {
+    border: 1px solid black;
+    opacity: 0.8;
+  }
+  article {
+    margin-top: 25px;
+  }  
+}
+/* 모바일(~ 599px) */
+@media screen and (max-width:599px) {
+  /* @media screen and (max-width:1023px) { */
+  .container {
+    width: 320px;
+  }
+
+  #mainHeader {
+    height: 90px;
+    background-image: url("images/13.jpg");
+  }
+
+  #mainHeader h1 {
+    margin-top: 15px;
+  }
+
+  .header1 a {
+    font-size: 0.8em;
+  }
+
+  #mainNav {
+    width: 320px;
+    height: 0px;
+  }
+
+  #mainNav ul li {
+    width: 280px;
+  }
+
+  #mainNav a {
+    display: block;
+    color: brown;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 0px 100px 0px -120px;
+    padding: 10px 0px;
+    font-size: 0.92em;
+  }
+
+  section#content {
+    width: 320px;
+    margin-top: 15px;
+    font-size: 0.9em;
+    padding: 0px;
+  }
+
+  .notice {
+    line-height: 25px;
+  }
+
+  #footer {
+    font-size: 0.7em;
+    width: 320px;
+  }
+
+  #sidebar {
+    width: 320px;
+    padding: 0px;
+  }
+
+  #sidebar img {
+    width: 98%;
+    margin: 0px 2px;
+  }
+
+  #sidebar img:hover {
+    border: 1px solid black;
+    opacity: 0.8;
+  }
+  article {
+    margin-top: 25px;
+  }  
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html</title>
+  <script>
+    // 함수 hoisting(호이스팅) : 함수 선언시에 선언부가 먼저 메모리에 올라오기에 함수 호출위치와 관계없이 '함수명'으로 함수를 호출하여 사용하는것
+    document.write("<p><b>1.안녕하세요</b></p>");
+    console.log("반갑습니다.");
+    alert("2.안녕하세요.")
+    document.write("<p><b>2.안녕하세요</b></p>");
+    
+    atom1();
+    // atom2();
+
+    function atom1() {
+      document.write("<p><b>3.안녕하세요</b></p>");
+      alert("3.안녕하세요.")
+    }
+
+    //atom1();
+    //atom2();
+  </script>
+</head>
+<body>
+  <h2>자바스크립트 기본</h2>
+
+  <script>
+    document.write("4.안녕하세요");
+    alert("4.안녕!!!")
+
+    atom1();
+    atom2();
+    
+    function atom2() {
+      document.write("<p><b>3.안녕하세요</b></p>");
+      alert("3.안녕하세요.")
+    }
+
+  </script>
+</body>
+</html>

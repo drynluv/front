@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test15.html</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      let product1 = document.getElementsByName("product")[0].value;
+      let product2 = document.getElementsByName("product")[1].value;
+      let product3 = document.getElementsByName("product")[2].value;
+      let product4 = document.getElementsByName("product")[3].value;
+      let product5 = document.getElementsByName("product")[4].value;
+
+      if(product1.trim() == "" || product1 < 0) {
+        alert("상품수량1을 입력하세요");
+        document.getElementsByName("product")[0].focus();
+      }
+      else if(product2.trim() == "" || product2 < 0) {
+        alert("상품수량2을 입력하세요");
+        document.getElementsByName("product")[1].focus();
+      }
+      else if(product3.trim() == "" || product3 < 0) {
+        alert("상품수량3을 입력하세요");
+        document.getElementsByName("product")[2].focus();
+      }
+      else if(product4.trim() == "" || product4 < 0) {
+        alert("상품수량4을 입력하세요");
+        document.getElementsByName("product")[3].focus();
+      }
+      else if(product5.trim() == "" || product5 < 0) {
+        alert("상품수량5을 입력하세요");
+        document.getElementsByName("product")[4].focus();
+      }
+      else {
+        let result = Number(product1) + Number(product2) + Number(product3) + Number(product4) + Number(product5);
+        demo.innerHTML = "상품 전체 합계 : " + result;
+      }
+    }
+  </script>
+</head>
+<body>
+<br/>
+<div class="container">
+  <h2 class="text-center mb-3">상품 주문서</h2>
+  <form name="myform">
+    <div class="mb-2 input-group">
+      <div class="input-group-text">상품1</div>
+      <input type="number" name="product" id="product1" value="10" min="0" class="form-control">
+    </div>
+    <div class="mb-2 input-group">
+      <div class="input-group-text">상품2</div>
+      <input type="number" name="product" id="product2" value="10" min="0" class="form-control">
+    </div>
+    <div class="mb-2 input-group">
+      <div class="input-group-text">상품3</div>
+      <input type="number" name="product" id="product3" value="10" min="0" class="form-control">
+    </div>
+    <div class="mb-2 input-group">
+      <div class="input-group-text">상품4</div>
+      <input type="number" name="product" id="product4" value="10" min="0" class="form-control">
+    </div>
+    <div class="mb-2 input-group">
+      <div class="input-group-text">상품5</div>
+      <input type="number" name="product" id="product5" value="10" min="0" class="form-control">
+    </div>
+    <div>
+      <input type="button" onclick="fCheck()" value="전송" class="btn btn-success form-control mb-1"  />
+      <input type="reset" value="다시입력" class="btn btn-warning form-control"  />
+    </div>
+    <div id="demo"></div>
+  </form>
+</body>
+</html>

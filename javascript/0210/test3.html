@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function atom(answer, printYes, printNo) {
+      if(answer.toUpperCase() == 'Y') printYes();
+      else printNo();
+    }
+
+    const printYes = () => console.log("작업을 계속 진행합니다.");
+    const printNo = () => console.log("작업을 마침니다.");
+
+    // 팩토리얼 함수
+    function fact() {
+      let su = document.getElementById("su").value;
+      let res = factorial(su);
+      console.log(`입력된수 ${su}의 팩토리얼값은 ${res} 입니다.`);
+    }
+
+    function factorial(su) {
+      return (su != 1) ? su * factorial(su - 1) : 1;
+    }
+
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>콜백함수(Callback Function)</h2>
+  <div>함수에서 함수를 호출하는경우....</div>
+  <p><input type="button" value="작업진행" onclick="atom('y', printYes, printNo)" class="btn btn-success"></p>
+  <p><input type="button" value="작업중지" onclick="atom('n', printYes, printNo)" class="btn btn-danger"></p>
+  <p>
+    <div class="input-group">
+      <div class="input-group-text">수</div>
+      <input type="number" name="su" id="su" value="5" class="form-control"/>
+      <input type="button" value="팩토리얼" onclick="fact()" class="btn btn-primary">
+    </div>
+  </p>
+</div>
+</body>
+</html>
