@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <h2>배열연습</h2>
+  <div id="demo"></div>
+
+  <script>
+    'use strict';
+               //0         1         2         3         4         5
+               //01234567890123456789012345678901234567890123456789012345
+    let text1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let text2 = '   ABC  BC  ABC  GHI  JKLABCMN..... A BC ... OPQ.. abc   ';
+
+    /*
+      length : 길이, substring() : 특정문자열 출력, indexOf() : 문자열검색(없으면 -1)
+      trim : 문자 앞뒤의 공백제거, toUpperCase : 영문 대문자로 변환, toLowerCase : 영문 소문자 변환
+      includes() : 문자열포함여무, slice() : 특정문자열 잘라내기, replace():처음부터 찾은 문자 치환, replaceAll():검색된 문자열을 치환
+    */ 
+    let str = ''
+    str += "includes() : " + text1.includes('abc') + "<br/>";
+    str += "includes() : " + text1.includes('abco') + "<br/>";
+    str += "slice() : "+text1.slice(5, 10)+"<br/>";
+    str += "slice() : "+text1.slice(5)+"<br/>";
+    str += "substring() : "+text1.substring(5,10)+"<br/>";
+    str += "substring() : "+text1.substring(5)+"<br/>";
+    str += "replace() : "+text1.replace('ABC','abc')+"<br/>";
+    str += "replace() : "+text2.replace('BC','bc')+"<br/>";
+    str += "replaceAll() : "+text2.replaceAll('BC','bc')+"<br/>";
+    str += "charAt() : "+text2.charAt(3)+"<br/>";
+    str += "split() : "+text2.split(" ")+"<br/>";
+    let strs = text2.split("   ");
+    for(let s of strs) {
+      str += "split : " + s + "<br/>";
+    }
+
+    let tel = '010-1234-5678';
+    let tels = tel.split('-');
+    tels.forEach((data, i) => console.log(i, data));
+
+    str += "<br/>";
+
+    demo.innerHTML = str;
+  </script>
+</body>
+</html>

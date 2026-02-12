@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    'use strict';
+
+  const arr2 = ["사과","배","바나나","딸기","포도"];
+  console.log("1.arr2.length :", arr2.length);
+  console.log("2.arr2 : ", arr2);
+  console.log("3.두번째 값 : ", arr2[1]);
+  console.log('');
+  
+  // 배열에 값 추가(뒤에서 추가:push, 앞쪽에서의 추가(unshift()))
+  arr2.push("참외");
+  console.log('4.arr2 :', arr2);
+  arr2.push("수박","메론");
+  console.log('5.arr2 :', arr2);
+  
+  arr2.unshift("앵두","호박");
+  console.log('6.arr2 :', arr2);
+  console.log("=================================");
+
+  // 배열의 값 제거(뒤에서 제거: pop(), 앞쪽에서의 제거(shift()))
+  arr2.pop();
+  arr2.pop();
+  console.log('7.arr2 :', arr2);
+  
+  arr2.shift();
+  arr2.shift();
+  console.log('8.arr2 :', arr2);
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  
+  // 지정한 위치요소의 제거(splice)
+  arr2.splice(2,1);
+  console.log('9.arr2 :', arr2);
+  
+  // slice
+  // let fruits = arr2.slice(2);  // 2번 인덱스를 포함한 이후의 모든 자료를 fruits변수에 담아준다.
+  let fruits = arr2.slice(2,4);   // 2번부터 4번인덱스 앞쪽자료를 fruits변수에 담아준다.
+  console.log('10.fruits :', fruits);
+  
+  // 두개의 배열 묶기 : concat()
+  let concatFruits = arr2.concat(fruits);
+  console.log('11.concatFruits :', concatFruits);
+  console.log('====================================');
+
+  // concatFruits배열의 값과 인덱스를 forEach 로 출력
+  // concatFruits.forEach((data, i) => {
+  //   console.log(`${data} : ${i}`);
+  // });
+  concatFruits.forEach((data, i) => console.log(`${data} : ${i}`));
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+  concatFruits.map((data, i) => console.log(`${data} : ${i}`));
+</script>
+</head>
+<body>
+  <h2>배열연습</h2>
+</body>
+</html>

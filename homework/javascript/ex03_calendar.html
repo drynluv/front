@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>달력</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+  <script>
+    'use strict';
+
+    function calendar() {
+      const year = document.getElementById("yyyy").value;
+      const month = document.getElementById("mm").value;
+      
+      let firstWeek = new Date(year, month-1, 1).getDay();
+      let lastDate = new Date(year, month, 0).getDate();
+      let column = 0, sw = 0;
+      
+      let str = '<table class="table table-bordered text-center">';
+      str += '<tr class="table-secondary">';
+      str += '<th><font color="red">일</font></th>'
+      str += '<th>월</th><th>화</th><th>수</th><th>목</th><th>금</th>';
+      str += '<th><font color="blue">토</font></th>'
+      str += '</tr>';
+      str += '<tr>';
+      for(let i=1; i<=lastDate; i++) {
+        if(sw == 0) {
+          for(let j=1; j<=firstWeek; j++) {
+            column++;
+            str += '<td>&nbsp;</td>';
+          }
+          sw = 1;
+        }
+
+        if(todayYYYY == year && todayMM == month && i == todayDD) str += '<td class="p-4 bg-warning">';
+        else str += '<td class="p-4">';
+        if(column == 0) str += `<font color="red">${i}</font>`;
+        else if(column == 6) str += `<font color="blue">${i}</font>`;
+        else str += `${i}`;
+        str += '</td>';
+
+        column++;
+
+        if(i != lastDate && column == 7) {
+          str += '</tr><tr>';
+          column = 0;
+        }
+      }
+      for(let i=column; i<7; i++) {
+        str += '<td>&nbsp;</td>';
+      }
+      str += '</tr></table>';
+      demo.innerHTML = str;
+    }
+
+    // Home버튼 클릭시 수행
+    function homeGo() {
+      yyyy.value = todayYYYY;
+      mm.value = todayMM;
+      calendar();
+    }
+  </script>
+  <style>
+    th {padding: 18px !important}
+  </style>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h3 class="text-center mb-3">★ 만 년 달 력 ★</h3>
+  <form name="myform">
+    <div class="input-group mb-3">
+      <div class="input-group-text me-1"><a href="javascript:homeGo()"><i class="fa-solid fa-house"></i></a></div>
+      <input type="number" name="yyyy" id="yyyy" onchange="calendar()" min="1900" max="2999" class="form-control text-center" />
+      <div class="input-group-text">년</div>
+      <input type="number" name="mm" id="mm" onchange="calendar()" min="1" max="12" class="form-control text-center" />
+      <div class="input-group-text me-1">월</div>
+      <!-- <input type="button" value="달력보기" onclick="calendar()" class="btn btn-success form-control"/> -->
+    </div>
+  </form>
+  <div id="demo"></div>
+</div>
+<script>
+  const today = new Date();
+  let todayYYYY = today.getFullYear();
+  let todayMM = today.getMonth() + 1;
+  let todayDD = today.getDate();
+
+  yyyy.value = todayYYYY;
+  mm.value = todayMM;
+
+  calendar();
+</script>
+</body>
+</html>

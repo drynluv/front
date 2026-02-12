@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test16.html</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    window.onload = function() {
+      
+      calcBtn.addEventListener('click', function() {
+        let product = document.querySelector("#product").value;
+        let price = document.querySelector("#price").value;
+        let su = document.querySelector("#su").value;
+
+        if(product.trim() == "" || price.trim() == "" || su.trim() == "") {
+          alert("상품명과 단가와 수량은 공백이 될수 없습니다.");
+          document.querySelector("#product").select();
+          document.querySelector("#product").focus();
+          return false;
+        }
+
+        let res = price * su;
+
+        demo.innerHTML = '상품명 : '+product+' , 가격 : '+price+' , 수량 : '+su+' , 총금액 : ' + res;
+
+      });
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2 class="text-center">상품 가격 계산하기</h2>
+  <form name="myform">
+    <div>상품명
+      <input type="text" name="product" id="product" value="온풍기" autofocus class="form-control mb-3"/>
+    </div>
+    <div>상품가격
+      <input type="number" name="price" id="price" value="100000" class="form-control mb-3"/>
+    </div>
+    <div>구매수량
+      <input type="number" name="su" id="su" value="1" class="form-control mb-3"/>
+    </div>
+    <div>
+      <input type="button" value="계산하기" id="calcBtn" class="btn btn-success form-control"/>
+    </div>
+  </form>
+  <hr/>
+  <div id="demo"></div>
+</div>
+</body>
+</html>

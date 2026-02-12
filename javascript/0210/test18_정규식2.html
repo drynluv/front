@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규식체크하기2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="test18.js"></script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>정규식(Regular Expression)</h2>
+  <form name="myform">
+    <div>
+      <p><input type="text" name="content" id="content" autofocus required class="form-control" /></p>
+      <p><input type="button" value="정규식체크" onclick="regexCheck()" class="btn btn-success form-control"></p>
+    </div>
+  </form>
+  <hr/>
+  <pre>
+    /*
+      자바스크립트 : /[~~]/플러그인
+      [^] : [] 안의 ^는 부정의 의미
+      ^[] : [] 앞의 ^는 '처음(시작)'의 의미
+      []+ : [] 뒤의 +는 1개 이상,  *은 0개 이상, ? 0개이거나 1개 이다.
+      []+$: $는 마지막을 의미, []뒤의 +$는 []안의 문자가 1개 이상이고, 또 1개 이상으로 끝날수도 있다.
+      ( ) : 그룹적용시
+      { } : 범위(크기) 적용시, 범위에 나오는 중괄호앞의 '.'은 앞의 내용이 {} 범위갯수만큼 진행하라는 구분자.
+      ?=.* : []안의 내용이 1개이상 반복되어 참이면 '(?=.*[])' 조건은 통과하고, 다음으로 진행하여 과정 수행
+      w   : 알파벳(대/소문자), 숫자, 밑줄(_)의 포함유무
+      자바스크립트에서의 한글은 유니코드에 완성된 코드로 등록되어 있기에 특수코드로 취급되지 않는다.
+
+      /\./g;      // '.'을 포함하고 있느냐?
+      /\d/g;      // 숫자를 포함하고 있느냐?
+      /\D/g;      // 숫자를 포함하고 있지 않느냐?
+      /\w/g;      // 영문자/숫자/_ 을 포함하고 있느냐?
+      /\W/g;      // 영문자/숫자/_ 를 제외한것을 포함하고 있느냐?
+      /\s/g;      // 문장안에 공백(탭포함)을 포함하고 있느냐?
+    */
+  </pre>
+</div>
+</body>
+</html>
